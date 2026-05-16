@@ -1,5 +1,5 @@
 {
-  "name": "@airpay/gateway-sdk",
+  "name": "@protocol-offair/gateway-sdk",
   "version": "0.1.0",
   "type": "module",
   "sideEffects": false,

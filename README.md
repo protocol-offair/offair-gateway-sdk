@@ -16,14 +16,14 @@ O SDK não implementa swap, stablecoins, custódia de saldo ou promessa de liqui
 ## Instalação local
 
 ```bash
-npm install @airpay/gateway-sdk
+npm install @protocol-offair/gateway-sdk
 ```
 
 No monorepo AirPay, use o workspace:
 
 ```bash
-npm --workspace @airpay/gateway-sdk run build
-npm --workspace @airpay/gateway-sdk run test
+npm --workspace @protocol-offair/gateway-sdk run build
+npm --workspace @protocol-offair/gateway-sdk run test
 ```
 
 ## Criar uma fatura SOL
@@ -31,7 +31,7 @@ npm --workspace @airpay/gateway-sdk run test
 Use o cliente merchant apenas em backend ou ambiente server-side. Não exponha a `apiKey` no frontend público.
 
 ```ts
-import { createAirPayGatewayClient } from "@airpay/gateway-sdk";
+import { createAirPayGatewayClient } from "@protocol-offair/gateway-sdk";
 
 const airpay = createAirPayGatewayClient({
   apiBaseUrl: process.env.AIRPAY_GATEWAY_API_BASE_URL!,
@@ -97,7 +97,7 @@ Headers:
 Exemplo com Express:
 
 ```ts
-import { assertGatewayWebhookSignature } from "@airpay/gateway-sdk";
+import { assertGatewayWebhookSignature } from "@protocol-offair/gateway-sdk";
 
 app.post("/webhooks/airpay", express.raw({ type: "application/json" }), async (req, res) => {
   const event = await assertGatewayWebhookSignature({
@@ -117,7 +117,7 @@ app.post("/webhooks/airpay", express.raw({ type: "application/json" }), async (r
 ## Ler QR Code ou copia-e-cola
 
 ```ts
-import { parseAirPayGatewayPaymentCode } from "@airpay/gateway-sdk";
+import { parseAirPayGatewayPaymentCode } from "@protocol-offair/gateway-sdk";
 
 const request = parseAirPayGatewayPaymentCode(copiedOrScannedText);
 
@@ -132,7 +132,7 @@ console.log(request.intentId);
 Use apenas em painéis internos ou workers controlados.
 
 ```ts
-import { createAirPayGatewayAdminClient } from "@airpay/gateway-sdk";
+import { createAirPayGatewayAdminClient } from "@protocol-offair/gateway-sdk";
 
 const admin = createAirPayGatewayAdminClient({
   apiBaseUrl: process.env.AIRPAY_GATEWAY_API_BASE_URL!,
