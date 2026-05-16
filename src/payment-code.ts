@@ -1,5 +1,5 @@
-import { AirPayGatewayValidationError } from "./errors";
-import type { AirPayGatewayCurrency, OnlinePaymentRequest, PaymentIntent } from "./types";
+import { AirPayGatewayValidationError } from "./errors.js";
+import type { AirPayGatewayCurrency, OnlinePaymentRequest, PaymentIntent } from "./types.js";
 
 const SOLANA_ADDRESS_RE = /^[1-9A-HJ-NP-Za-km-z]{32,44}$/;
 const SUPPORTED_GATEWAY_CURRENCIES: AirPayGatewayCurrency[] = ["SOL", "USDC", "USDT", "BRZ", "OFFAIR"];

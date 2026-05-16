@@ -1,4 +1,4 @@
-import { AirPayGatewayError, AirPayGatewayValidationError } from "./errors";
+import { AirPayGatewayError, AirPayGatewayValidationError } from "./errors.js";
 import type {
   AirPayGatewayAdminClientOptions,
   AirPayGatewayAuthClientOptions,
@@ -22,7 +22,7 @@ import type {
   PaymentIntentCreateRequest,
   PaymentIntentStatusResponse,
   RequestOptions,
-} from "./types";
+} from "./types.js";
 
 type AuthKind = "merchant" | "admin" | "none";
 

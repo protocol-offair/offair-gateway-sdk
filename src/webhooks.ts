@@ -1,5 +1,5 @@
-import { AirPayGatewayValidationError } from "./errors";
-import type { GatewayWebhookEvent } from "./types";
+import { AirPayGatewayValidationError } from "./errors.js";
+import type { GatewayWebhookEvent } from "./types.js";
 
 export type GatewayWebhookHeaders =
   | Headers
