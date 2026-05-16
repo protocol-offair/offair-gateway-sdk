@@ -30,6 +30,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/airpay-protocol/airpay-gateway-sdk.git"
+    "url": "git+https://github.com/protocol-offair/airpay-gateway-sdk.git"
   }
 }
